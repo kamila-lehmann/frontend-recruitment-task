@@ -1,0 +1,69 @@
+/* Variables */
+$pure-white: #FFFFFF;
+$font-dark: #121212;
+$btn-beige: #E4C1AE;
+
+/* Mixins */
+@mixin font($size, $weight, $line) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+  font-family: "Roboto", sans-serif;
+  color: $font-dark;
+}
+
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1440px;
+  background-color: $pure-white;
+}
+
+/* Image Styles */
+img {
+  @include width-height(505px, 330px);
+}
+
+/* Main Content Styles */
+h1 {
+  @include font(2.625rem, 700, 3.15rem);
+  margin-bottom: 1.5rem;
+}
+
+.desc {
+  @include font(1rem, 300, 1.5rem);
+  @include width-height(23.75em, 6em);
+  margin-bottom: 2rem;
+}
+
+.btn {
+  @include font(1rem, 700, 1rem);
+  @include width-height(8rem, 3rem);
+  background-color: $btn-beige;
+  border-radius: 3rem;
+  border: none;
+  color: $pure-white;
+}
+
+/* Popup Styles */
+
+/* Layout Styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  padding-top: 6rem;;
+}
+
+/* Media Queries */
