@@ -1,0 +1,1 @@
+const modal=document.getElementById("modal"),btn=document.getElementById("btn"),span=document.getElementById("close");let counter=0;btn.onclick=()=>{modal.style.display="block",5<counter||counter++,console.log(`You clicked ${counter} times`)},span.onclick=()=>{modal.style.display="none"},window.onclick=e=>{event.target==modal&&(modal.style.display="none")};
