@@ -13,12 +13,10 @@ function countClicks() {
     } else {
         sessionStorage.count = 1;
     }
-    displayCounter.innerHTML = sessionStorage.count;
     if (sessionStorage.count >= 5) {
       resetBtn.style.opacity = 1;
       resetBtn.addEventListener("click", () => {
         sessionStorage.count = 0;
-        //count = 0;
         modal.style.display = "none";
       });
     } else {
@@ -31,6 +29,7 @@ function countClicks() {
 btn.onclick = () => {
   modal.style.display = "block";
   countClicks();
+  displayCounter.innerHTML = sessionStorage.count;
 }
 
 // Close the modal when user clicks "X"
